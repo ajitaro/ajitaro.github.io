@@ -3,7 +3,6 @@ import Experience from './components/Experience';
 import Work from './components/Work';
 import Skills from './components/Skills';
 import Education from './components/Education';
-import Community from './components/Community';
 import Contact from './components/Contact';
 import ThemeToggle from './components/ThemeToggle';
 
@@ -16,7 +15,6 @@ function App() {
       <Work />
       <Skills />
       <Education />
-      <Community />
       <Contact />
     </main>
   )

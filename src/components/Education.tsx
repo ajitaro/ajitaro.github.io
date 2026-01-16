@@ -36,7 +36,7 @@ const Education = () => {
                     Education
                 </h2>
 
-                <div className="education-list grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="education-list grid grid-cols-1 gap-8">
                     {EDUCATION.map((item, index) => (
                         <div
                             key={index}

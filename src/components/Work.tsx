@@ -2,9 +2,6 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { PROJECTS } from '../data';
 
-// Duplicate projects for demonstration purposes
-const DEMO_PROJECTS = [...PROJECTS, ...PROJECTS, ...PROJECTS, ...PROJECTS];
-
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
     const cardRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -51,7 +48,7 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
                     ))}
                 </div>
 
-                <div className="mt-auto space-y-3 border-t border-gray-200 dark:border-gray-800 pt-6">
+                <div className="mt-auto space-y-3 border-t border-gray-200 dark:border-gray-800 pt-6 mb-6">
                     {project.details.map((detail, i) => (
                         <div key={i} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
                             <span className="mr-2 mt-1.5 w-1 h-1 bg-green-500 rounded-full flex-shrink-0" />
@@ -59,6 +56,23 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
                         </div>
                     ))}
                 </div>
+
+                {project.url && (
+                    <motion.a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center justify-center gap-2 w-full py-3 px-6 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-xl transition-colors hover:bg-gray-800 dark:hover:bg-gray-100"
+                    >
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </motion.a>
+                )}
             </div>
         </motion.div>
     );
@@ -94,7 +108,7 @@ const Work = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {DEMO_PROJECTS.map((project, index) => (
+                    {PROJECTS.map((project, index) => (
                         <ProjectCard
                             key={index}
                             project={project}
