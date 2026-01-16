@@ -18,6 +18,8 @@ const Contact = () => {
                         <a
                             key={index}
                             href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300"
                             aria-label={social.name}
                         >
