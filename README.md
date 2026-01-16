@@ -1,6 +1,6 @@
 # Ajitaro Portfolio
 
-A modern, high-performance personal portfolio website for Fitriaji Taqiy Robbaanii (Ajitaro), a Mobile Engineer. Built with React, TypeScript, Vite, and Tailwind CSS.
+A modern, high-performance personal portfolio website for Fitriaji Taqiy Robbaanii (Ajitaro), a Software Engineer. Built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## Tech Stack
 

@@ -2,7 +2,7 @@ import { HERO } from '../data';
 import { motion, type Variants } from 'framer-motion';
 
 const Hero = () => {
-    const text = "Digital Architect";
+    const text = "Software Engineer";
     const characters = text.split("");
 
     const containerVariants: Variants = {

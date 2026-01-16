@@ -2,8 +2,8 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export const HERO = {
     name: "Fitriaji Taqiy Robbaanii",
-    role: "Mobile Engineer (React Native)",
-    summary: "Mobile Engineer with 4+ years of experience building and scaling high-traffic e-commerce applications. Specialized in performance optimization, CI/CD automation, and OTA delivery using CodePush.",
+    role: "Software Engineer",
+    summary: "Software Engineer with 4+ years of experience building and scaling high-traffic e-commerce applications. Specialized in performance optimization, CI/CD automation, and OTA delivery using CodePush.",
     cta: {
         experience: "View Experience",
         projects: "View Projects"
