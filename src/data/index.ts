@@ -14,19 +14,19 @@ export const EXPERIENCE = [
     {
         company: "Ruparupa",
         role: "Mobile Technology Engineer",
-        period: "Sep 2025 – Present",
+        period: "Sep 2023 – Present",
         description: [
             "Built a short-video feed experience similar to TikTok FYP / Instagram Reels",
-            "Led adoption of TypeScript and a feature-driven architecture"
+            "Led a front-end team effort to adopt TypeScript, improving code quality and reducing bugs"
         ]
     },
     {
         company: "Ruparupa",
         role: "Mobile Technology Developer",
-        period: "Oct 2021 – Sep 2025",
+        period: "Oct 2021 – Sep 2023",
         description: [
-            "Optimized Product Catalogue load time (~10s → ~1s)",
-            "Optimized Checkout load time (~12s → ~1s)",
+            "Optimized Product Catalogue load time (~10s → ~1s) by implementing lazy loading and image optimization",
+            "Optimized Checkout load time (~12s → ~1s) by deferring non-critical API calls and using client-side caching",
             "Built a full CI/CD OTA delivery system using CodePush",
             "Tech stack: React Native, Node.js, Express, MySQL, Docker, AWS, CircleCI, Fastlane"
         ]
@@ -84,7 +84,10 @@ export const EDUCATION = [
         degree: "Bachelor’s Degree in Software Engineering",
         gpa: "3.5",
         extra: []
-    },
+    }
+];
+
+export const COMMUNITY = [
     {
         institution: "Coding Teacher",
         degree: "Taught HTML, CSS, and JavaScript fundamentals to elementary school students",
@@ -96,8 +99,8 @@ export const EDUCATION = [
 export const CONTACT = {
     email: "ftaqiy@gmail.com",
     social: [
-        { name: "LinkedIn", url: "#", icon: FaLinkedin }, // Placeholder URL
-        { name: "GitHub", url: "#", icon: FaGithub }, // Placeholder URL
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/ajitaro", icon: FaLinkedin },
+        { name: "GitHub", url: "https://github.com/ajitaro", icon: FaGithub },
         { name: "Email", url: "mailto:ftaqiy@gmail.com", icon: FaEnvelope },
     ],
     cta: "Let’s build high-performance products together."
