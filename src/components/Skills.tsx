@@ -13,7 +13,7 @@ const Skills = () => {
             // Staggered skill categories reveal
             const categories = gsap.utils.toArray('.skill-category');
 
-            categories.forEach((cat: any, i) => {
+            categories.forEach((cat: Element, i: number) => {
                 gsap.from(cat, {
                     y: 50,
                     opacity: 0,

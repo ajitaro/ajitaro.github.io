@@ -13,7 +13,7 @@ const Experience = () => {
             // Animate each timeline item
             const items = gsap.utils.toArray('.experience-item');
 
-            items.forEach((item: any) => {
+            items.forEach((item: Element) => {
                 gsap.from(item, {
                     y: 50,
                     opacity: 0,
