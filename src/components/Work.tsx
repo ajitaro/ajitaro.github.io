@@ -2,15 +2,22 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { PROJECTS } from '../data';
 
+const PROJECT_CARD_SCROLL_OFFSET: ["start end", "center center"] = ["start end", "center center"];
+const WORK_SCROLL_OFFSET: ["start end", "end start"] = ["start end", "end start"];
+const SCROLL_PROGRESS_RANGE = [0, 1];
+const PROJECT_CARD_SCALE_RANGE = [0.8, 1];
+const PROJECT_CARD_OPACITY_RANGE = [0.3, 1];
+const WORK_X_TRANSFORM_RANGE = ["0%", "-50%"];
+
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
     const cardRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: cardRef,
-        offset: ["start end", "center center"]
+        offset: PROJECT_CARD_SCROLL_OFFSET
     });
 
-    const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+    const scale = useTransform(scrollYProgress, SCROLL_PROGRESS_RANGE, PROJECT_CARD_SCALE_RANGE);
+    const opacity = useTransform(scrollYProgress, SCROLL_PROGRESS_RANGE, PROJECT_CARD_OPACITY_RANGE);
 
     return (
         <motion.div
@@ -82,10 +89,10 @@ const Work = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end start"]
+        offset: WORK_SCROLL_OFFSET
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+    const x = useTransform(scrollYProgress, SCROLL_PROGRESS_RANGE, WORK_X_TRANSFORM_RANGE);
 
     return (
         <section
