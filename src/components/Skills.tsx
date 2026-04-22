@@ -11,7 +11,7 @@ const Skills = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Staggered skill categories reveal
-            const categories = gsap.utils.toArray<Element>('.skill-category');
+            const categories = gsap.utils.toArray<HTMLElement>('.skill-category');
 
             categories.forEach((cat, i) => {
                 gsap.from(cat, {
