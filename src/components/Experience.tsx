@@ -11,7 +11,7 @@ const Experience = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Animate each timeline item
-            const items = gsap.utils.toArray<Element>('.experience-item');
+            const items = gsap.utils.toArray<HTMLElement>('.experience-item');
 
             items.forEach((item) => {
                 gsap.from(item, {
