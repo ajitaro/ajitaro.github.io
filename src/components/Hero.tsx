@@ -1,38 +1,39 @@
 import { HERO } from '../data';
 import { motion, type Variants } from 'framer-motion';
 
+const text = "Software Engineer";
+const characters = text.split("");
+
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.05,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const childVariants: Variants = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+        rotate: 10
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        rotate: 0,
+        transition: {
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+        },
+    },
+};
+
 const Hero = () => {
-    const text = "Software Engineer";
-    const characters = text.split("");
-
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.05,
-                delayChildren: 0.2,
-            },
-        },
-    };
-
-    const childVariants: Variants = {
-        hidden: {
-            y: 100,
-            opacity: 0,
-            rotate: 10
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            rotate: 0,
-            transition: {
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-            },
-        },
-    };
 
     return (
         <section
